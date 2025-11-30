@@ -1,24 +1,22 @@
 # Pillars of Thought
 
-A static, data-driven rebuild inspired by the aesthetic of Philosophy Bro. The page is driven by a JSON feed so you can quickly swap posts without touching the layout.
+A static Jekyll rebuild inspired by the aesthetic of Philosophy Bro, but fully rebranded for Pillars of Thought. Markdown posts drive every card and detail.
 
-## Run locally
+## Run locally with Jekyll
 
 ```bash
-python -m http.server 8000
+bundle install
+bundle exec jekyll serve
 ```
 
-Open http://localhost:8000 in a browser.
+Open http://localhost:4000 in a browser. Everything is GitHub Pages compatible—just push to `main` and enable Pages.
 
 ## Update content
 
-Edit `data/pillars.json` to add, remove, or reorder posts. Each entry supports:
+Add Markdown files to `_posts/` in the standard `YYYY-MM-DD-title.md` format. Front matter supports:
 
 - `pillar`: Theology, Philosophy, Policy, or History
-- `title`: Headline text
-- `excerpt`: Short paragraph
-- `tags`: Array of tags rendered as chips
 - `mood`: One-line tone setter displayed in the topline
-- `updated`: Friendly date stamp (any text)
+- `tags`: Array of tags rendered as chips
 
-Buttons across the top filter the rendered posts by pillar. All styling lives in `css/styles.css`; the rendering logic is in `js/script.js`.
+Buttons across the top filter the rendered posts by pillar. Each pillar also has its own landing page (`/theology/`, `/philosophy/`, `/policy/`, `/history/`). All styling lives in `css/styles.css`; the rendering logic is in `js/script.js`.
