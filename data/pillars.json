@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "pillar": "Theology",
+      "title": "Augustine and the Restless Heart",
+      "excerpt": "Why Augustine's longings, doubts, and pursuit of grace still guide spiritual imagination across centuries.",
+      "tags": ["City of God", "Confessions", "Grace"],
+      "mood": "Reflective",
+      "updated": "Apr 12"
+    },
+    {
+      "pillar": "Philosophy",
+      "title": "Plato's Cave Recast",
+      "excerpt": "Stepping out of the shadows is still the core move in any search for truth. A quick primer on why forms matter.",
+      "tags": ["Forms", "Epistemology", "Allegory"],
+      "mood": "Curious",
+      "updated": "Apr 10"
+    },
+    {
+      "pillar": "Policy",
+      "title": "The Social Contract in Plain Language",
+      "excerpt": "How consent, obligation, and shared expectations form the backdrop of any community we choose to build.",
+      "tags": ["Civics", "Consent", "Governance"],
+      "mood": "Grounded",
+      "updated": "Apr 9"
+    },
+    {
+      "pillar": "History",
+      "title": "Caesar at the Rubicon",
+      "excerpt": "One decision, one river, and a republic forever changed. What made the leap feel inevitable?",
+      "tags": ["Romans", "Crisis", "Turning Points"],
+      "mood": "Resolute",
+      "updated": "Apr 7"
+    },
+    {
+      "pillar": "Philosophy",
+      "title": "Nietzsche on Becoming",
+      "excerpt": "Why Zarathustra's call to become who we are still challenges how we create meaning without easy certainties.",
+      "tags": ["Existentialism", "Meaning", "Übermensch"],
+      "mood": "Intense",
+      "updated": "Apr 5"
+    },
+    {
+      "pillar": "Theology",
+      "title": "Aquinas and the Summa",
+      "excerpt": "Thomas Aquinas framed faith and reason as partners, drafting a patient roadmap for answering every 'what about' raised in the cloister.",
+      "tags": ["Thomism", "Reason", "Faith"],
+      "mood": "Patient",
+      "updated": "Apr 3"
+    }
+  ]
+}
