@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pillars of Thought</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="brand-mark" aria-hidden="true">
+        <div class="brand-crest">
+          <div class="crest-inner"></div>
+        </div>
+      </div>
+      <div class="title-group">
+        <p class="eyebrow">Welcome to the Broseum</p>
+        <h1>Pillars of Thought</h1>
+        <p class="subtitle">Breaking down big ideas with the confidence of a toga-clad philosopher bro.</p>
+      </div>
+    </header>
+
+    <nav class="pillars-nav" aria-label="Pillars">
+      <button class="pillar-tab active" data-pillar="all">All Pillars</button>
+      <button class="pillar-tab" data-pillar="theology">Theology</button>
+      <button class="pillar-tab" data-pillar="philosophy">Philosophy</button>
+      <button class="pillar-tab" data-pillar="policy">Policy</button>
+      <button class="pillar-tab" data-pillar="history">History</button>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h2>Big thoughts without the pretension.</h2>
+          <p>
+            Each pillar is packed with punchy, skimmable breakdowns. Swap the copy, swap the images, and publish new posts by editing a simple JSON file. Everything on this page is driven by structured data, so you can tweak the vibe without touching the layout.
+          </p>
+        </div>
+        <div class="hero-portrait" aria-hidden="true">
+          <div class="portrait-shadow"></div>
+          <div class="portrait-frame">
+            <div class="portrait-glow"></div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-live="polite" class="posts" id="posts">
+        <!-- Posts are rendered here -->
+      </section>
+    </main>
+  </div>
+</body>
+</html>
