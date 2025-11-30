@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Pocket Notes on First Principles
 pillar: Philosophy
 mood: Curious

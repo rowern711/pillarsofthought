@@ -1,55 +1,42 @@
----
----
 const postsContainer = document.getElementById("posts");
 const tabs = Array.from(document.querySelectorAll(".pillar-tab"));
 
-const postsData = [
-  {% assign posts = site.posts | sort: 'date' | reverse %}
-  {% for post in posts %}
-  {
-    title: {{ post.title | jsonify }},
-    pillarLabel: {{ post.pillar | default: "Pillar" | jsonify }},
-    pillarKey: {{ post.pillar | default: "pillar" | downcase | jsonify }},
-    mood: {{ post.mood | default: "New" | jsonify }},
-    updated: "{{ post.date | date: '%b %-d, %Y' }}",
-    excerpt: {{ post.excerpt | strip_html | strip_newlines | jsonify }},
-    tags: {{ post.tags | jsonify }},
-    url: {{ post.url | relative_url | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-];
+async function fetchPosts() {
+  try {
+    const res = await fetch("data/pillars.json");
+    if (!res.ok) throw new Error("Failed to load pillar data");
+    const { posts } = await res.json();
+    return posts;
+  } catch (err) {
+    console.error(err);
+    postsContainer.innerHTML = `<div class="post-card"><p class="post-excerpt">Unable to load posts. Check that <code>data/pillars.json</code> exists.</p></div>`;
+    return [];
+  }
+}
 
 function createPost(post) {
   const card = document.createElement("article");
   card.className = "post-card";
-  const tags = Array.isArray(post.tags) ? post.tags : [];
-
   card.innerHTML = `
-    <a class="post-link" href="${post.url}">
-      <div class="post-topline">
-        <span class="pill-label">${post.pillarLabel}</span>
-        <span>${post.mood}</span>
-        <span>Updated ${post.updated}</span>
-      </div>
-      <h3 class="post-title">${post.title}</h3>
-      <p class="post-excerpt">${post.excerpt}</p>
-      <div class="post-meta">
-        ${tags.map((tag) => `<span class="meta-chip">${tag}</span>`).join("")}
-      </div>
-    </a>
+    <div class="post-topline">
+      <span class="pill-label">${post.pillar}</span>
+      <span>${post.mood}</span>
+      <span>Updated ${post.updated}</span>
+    </div>
+    <h3 class="post-title">${post.title}</h3>
+    <p class="post-excerpt">${post.excerpt}</p>
+    <div class="post-meta">
+      ${post.tags.map((tag) => `<span class="meta-chip">${tag}</span>`).join("")}
+    </div>
   `;
   return card;
 }
 
 function renderPosts(posts, filter) {
   postsContainer.innerHTML = "";
-  const filtered =
-    filter === "all"
-      ? posts
-      : posts.filter((p) => (p.pillarKey || "").toLowerCase() === filter);
-
+  const filtered = filter === "all" ? posts : posts.filter((p) => p.pillar.toLowerCase() === filter);
   if (!filtered.length) {
-    postsContainer.innerHTML = `<div class="post-card"><p class="post-excerpt">No posts yet for this pillar. Add a Markdown file in <code>_posts/</code> with <code>pillar</code>, <code>mood</code>, and <code>tags</code>.</p></div>`;
+    postsContainer.innerHTML = `<div class="post-card"><p class="post-excerpt">No posts yet for this pillar. Add one in <code>data/pillars.json</code>.</p></div>`;
     return;
   }
   filtered.forEach((post) => postsContainer.appendChild(createPost(post)));
@@ -59,15 +46,15 @@ function setActiveTab(target) {
   tabs.forEach((tab) => tab.classList.toggle("active", tab === target));
 }
 
-function init() {
-  if (!postsContainer || !tabs.length) return;
-  renderPosts(postsData, "all");
+async function init() {
+  const posts = await fetchPosts();
+  renderPosts(posts, "all");
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const pillar = tab.dataset.pillar;
       setActiveTab(tab);
-      renderPosts(postsData, pillar);
+      renderPosts(posts, pillar);
     });
   });
 }

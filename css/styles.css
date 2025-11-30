@@ -123,8 +123,6 @@ body {
   box-shadow: 0 6px 12px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease, background 160ms ease;
-  text-align: center;
-  text-decoration: none;
 }
 
 .pillar-tab:hover,
@@ -203,7 +201,7 @@ body {
 }
 
 .portrait-glow::after {
-  content: "PILLARS";
+  content: "BRO";
   position: absolute;
   inset: 0;
   display: grid;
@@ -228,19 +226,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.06);
   display: grid;
   gap: 10px;
-}
-
-.post-link {
-  display: grid;
-  gap: 10px;
-  color: inherit;
-  text-decoration: none;
-}
-
-.post-link:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 6px;
-  border-radius: 10px;
 }
 
 .post-topline {
@@ -273,30 +258,6 @@ body {
   margin: 0;
   color: var(--ink);
   line-height: 1.6;
-}
-
-.post-page {
-  background: #fff;
-  padding: 28px 24px;
-  border-radius: 16px;
-  box-shadow: 0 14px 30px var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  display: grid;
-  gap: 12px;
-}
-
-.post-body {
-  color: var(--ink);
-  line-height: 1.8;
-}
-.post-body p {
-  margin: 0 0 14px;
-}
-.post-body strong {
-  color: var(--accent-dark);
-}
-.post-body em {
-  color: var(--muted);
 }
 
 .post-meta {
