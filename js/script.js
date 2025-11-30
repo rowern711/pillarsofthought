@@ -1,12 +1,9 @@
----
----
 const postsContainer = document.getElementById("posts");
 const tabs = Array.from(document.querySelectorAll(".pillar-tab"));
-const dataUrl = "{{ '/data/pillars.json' | relative_url }}";
 
 async function fetchPosts() {
   try {
-    const res = await fetch(dataUrl);
+    const res = await fetch("data/pillars.json");
     if (!res.ok) throw new Error("Failed to load pillar data");
     const { posts } = await res.json();
     return posts;

@@ -201,7 +201,7 @@ body {
 }
 
 .portrait-glow::after {
-  content: "PILLARS";
+  content: "BRO";
   position: absolute;
   inset: 0;
   display: grid;

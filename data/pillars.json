@@ -2,50 +2,50 @@
   "posts": [
     {
       "pillar": "Theology",
-      "title": "Augustine and the Restless Heart",
-      "excerpt": "Why Augustine's longings, doubts, and pursuit of grace still guide spiritual imagination across centuries.",
+      "title": "A Dude's Guide to Augustine",
+      "excerpt": "Augustine wrestled with desire, doubt, and the whole problem-of-evil thing before it was cool. Here's why his restless heart still slaps today.",
       "tags": ["City of God", "Confessions", "Grace"],
-      "mood": "Reflective",
+      "mood": "Earnest but chill",
       "updated": "Apr 12"
     },
     {
       "pillar": "Philosophy",
-      "title": "Plato's Cave Recast",
-      "excerpt": "Stepping out of the shadows is still the core move in any search for truth. A quick primer on why forms matter.",
-      "tags": ["Forms", "Epistemology", "Allegory"],
-      "mood": "Curious",
+      "title": "Plato's Cave, But Make It Gym Talk",
+      "excerpt": "Imagine you’re spotting your buddy and realize the weights are fake shadows. Congrats, you just reinvented the Allegory of the Cave.",
+      "tags": ["Forms", "Leg Day", "Epistemology"],
+      "mood": "Mythic & beefy",
       "updated": "Apr 10"
     },
     {
       "pillar": "Policy",
-      "title": "The Social Contract in Plain Language",
-      "excerpt": "How consent, obligation, and shared expectations form the backdrop of any community we choose to build.",
-      "tags": ["Civics", "Consent", "Governance"],
-      "mood": "Grounded",
+      "title": "The Social Contract as a Group Chat",
+      "excerpt": "Rousseau basically asked: what if we left the group chat on read until someone suggested mutual respect and better snacks?",
+      "tags": ["Civics", "Consent", "Group Projects"],
+      "mood": "Democratic hype",
       "updated": "Apr 9"
     },
     {
       "pillar": "History",
-      "title": "Caesar at the Rubicon",
-      "excerpt": "One decision, one river, and a republic forever changed. What made the leap feel inevitable?",
-      "tags": ["Romans", "Crisis", "Turning Points"],
-      "mood": "Resolute",
+      "title": "Caesar Crosses the Rubicon (and the Gym)",
+      "excerpt": "Bro saw one little river and said: 'alea iacta est.' Sometimes you just have to yeet the dice and commit.",
+      "tags": ["Romans", "High Stakes", "Marching"],
+      "mood": "Epic sprint",
       "updated": "Apr 7"
     },
     {
       "pillar": "Philosophy",
-      "title": "Nietzsche on Becoming",
-      "excerpt": "Why Zarathustra's call to become who we are still challenges how we create meaning without easy certainties.",
-      "tags": ["Existentialism", "Meaning", "Übermensch"],
-      "mood": "Intense",
+      "title": "Nietzsche at the Kickback",
+      "excerpt": "God might be dead, but the aux is very alive. Zarathustra would absolutely deliver a toast before the vibes shift.",
+      "tags": ["Existentialism", "Mosh Pit", "Übermensch"],
+      "mood": "Chaotic neutral",
       "updated": "Apr 5"
     },
     {
       "pillar": "Theology",
-      "title": "Aquinas and the Summa",
-      "excerpt": "Thomas Aquinas framed faith and reason as partners, drafting a patient roadmap for answering every 'what about' raised in the cloister.",
+      "title": "Aquinas in the Basement Library",
+      "excerpt": "Summa Theologiae is just a massive FAQ. Thomas was answering every 'but what about' long before the comments section existed.",
       "tags": ["Thomism", "Reason", "Faith"],
-      "mood": "Patient",
+      "mood": "Scholastic grind",
       "updated": "Apr 3"
     }
   ]
