@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<header class="site-header">
+  <div class="brand-mark" aria-hidden="true">
+    <div class="brand-crest">
+      <div class="crest-inner"></div>
+    </div>
+  </div>
+  <div class="title-group">
+    <p class="eyebrow">Pillars of Thought</p>
+    <h1>{{ page.title }}</h1>
+    <p class="subtitle">{{ page.pillar | default: "Notes" }} — {{ page.mood | default: "New" }}</p>
+  </div>
+</header>
+
+{% assign current_pillar = page.pillar | downcase %}
+<nav class="pillars-nav pillar-links" aria-label="Pillar pages">
+  <a class="pillar-tab" href="{{ '/' | relative_url }}">All Pillars</a>
+  <a class="pillar-tab{% if current_pillar == 'theology' %} active{% endif %}" href="{{ '/theology/' | relative_url }}">Theology</a>
+  <a class="pillar-tab{% if current_pillar == 'philosophy' %} active{% endif %}" href="{{ '/philosophy/' | relative_url }}">Philosophy</a>
+  <a class="pillar-tab{% if current_pillar == 'policy' %} active{% endif %}" href="{{ '/policy/' | relative_url }}">Policy</a>
+  <a class="pillar-tab{% if current_pillar == 'history' %} active{% endif %}" href="{{ '/history/' | relative_url }}">History</a>
+</nav>
+
+<main>
+  <article class="post-page">
+    <div class="post-topline">
+      <span class="pill-label">{{ page.pillar | default: "Pillar" }}</span>
+      <span>{{ page.mood | default: "New" }}</span>
+      <span>Updated {{ page.date | date: '%b %-d, %Y' }}</span>
+    </div>
+    <h2 class="post-title">{{ page.title }}</h2>
+    <div class="post-body">{{ content }}</div>
+    {% if page.tags %}
+    <div class="post-meta">
+      {% for tag in page.tags %}
+      <span class="meta-chip">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+</main>
