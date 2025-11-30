@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Small Bets, Real Stakes
 pillar: Policy
 mood: Pragmatic
