@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Field Notes from Old Roads
 pillar: History
 mood: Reflective

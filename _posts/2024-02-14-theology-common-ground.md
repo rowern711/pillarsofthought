@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Communion and Common Ground
 pillar: Theology
 mood: Earnest
